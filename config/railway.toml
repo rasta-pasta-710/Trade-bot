@@ -1,0 +1,14 @@
+# Railway.app Configuration
+
+[env]
+ENVIRONMENT = "production"
+TRADING_MODE = "live"
+LOG_LEVEL = "INFO"
+
+[build]
+builder = "nix"
+
+[deploy]
+startCommand = "python bot.py --mode=live --exchange=binance"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
